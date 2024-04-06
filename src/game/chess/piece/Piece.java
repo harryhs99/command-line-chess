@@ -8,4 +8,5 @@ package game.chess.piece;
 public interface Piece {
 
 
+
 }

@@ -7,6 +7,12 @@ package game.chess.piece;
  */
 public abstract class ChessPiece implements Piece {
 
+    protected boolean colour;
+
+    public ChessPiece(boolean colour)
+    {
+        this.colour = colour;
+    }
     @Override
     public String toString() {
         return "";

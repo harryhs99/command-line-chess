@@ -6,4 +6,5 @@ package game.chess.board;
  * @author Harry Hainsworth-Staples
  */
 public class Position {
+
 }

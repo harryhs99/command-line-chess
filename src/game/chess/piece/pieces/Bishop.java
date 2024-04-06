@@ -4,15 +4,15 @@ import game.chess.piece.ChessPiece;
 
 public class Bishop extends ChessPiece {
 
-    private final String whitePiece = "♗";
-    private final String blackPiece = "♝";
-
-
+    public Bishop(boolean colour)
+    {
+        super(colour);
+    }
     @Override
     public String toString()
     {
-        if (this == this) // placeholder logic
-            return whitePiece;
-        return blackPiece;
+        if (this.colour) // placeholder logic
+            return "♗";
+        return "♝";
     }
 }

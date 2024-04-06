@@ -4,15 +4,17 @@ import game.chess.piece.ChessPiece;
 
 public class Rook extends ChessPiece {
 
-    private final String whitePiece = "♖";
-    private final String blackPiece = "♜";
+    public Rook(boolean colour)
+    {
+        super(colour);
+    }
 
 
     @Override
     public String toString()
     {
-        if (this == this) // placeholder logic
-            return whitePiece;
-        return blackPiece;
+        if (this.colour) // placeholder logic
+            return "♖";
+        return "♜";
     }
 }

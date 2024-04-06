@@ -4,15 +4,17 @@ import game.chess.piece.ChessPiece;
 
 public class Knight extends ChessPiece {
 
-    private final String whitePiece = "♘";
-    private final String blackPiece = "♞";
+    public Knight(boolean colour)
+    {
+        super(colour);
+    }
 
 
     @Override
     public String toString()
     {
-        if (this == this) // placeholder logic
-            return whitePiece;
-        return blackPiece;
+        if (this.colour)
+            return "♘";
+        return "♞";
     }
 }

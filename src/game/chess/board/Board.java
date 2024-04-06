@@ -18,41 +18,41 @@ public class Board {
     }
 
     public void initialiseBoard() {
+        boolean colour = true;
+
         for (int i = 0; i < board.length; i++) {
             for (int j = 0; j < board[i].length; j++) {
                 switch (i) {
-                    case 0:
                     case 7:
+                        colour = false;
+                    case 0:
                         switch (j) {
                             case 0:
                             case 7:
-                                board[i][j] = new Rook();
+                                board[i][j] = new Rook(colour);
                                 break;
                             case 1:
                             case 6:
-                                board[i][j] = new Knight();
+                                board[i][j] = new Knight(colour);
                                 break;
                             case 2:
                             case 5:
-                                board[i][j] = new Bishop();
+                                board[i][j] = new Bishop(colour);
                                 break;
                             case 3:
-                                board[i][j] = new Queen();
+                                board[i][j] = new Queen(colour);
                                 break;
                             case 4:
-                                board[i][j] = new King();
+                                board[i][j] = new King(colour);
                                 break;
                         }
                         break;
-                    case 1:
                     case 6:
-                        board[i][j] = new Pawn();
+                        colour = false;
+                    case 1:
+                        board[i][j] = new Pawn(colour);
                         break;
-
-
                 }
-
-
             }
         }
     }
