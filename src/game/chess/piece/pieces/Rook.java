@@ -1,6 +1,8 @@
 package game.chess.piece.pieces;
 
-public class Rook {
+import game.chess.piece.ChessPiece;
+
+public class Rook extends ChessPiece {
 
     private final String whitePiece = "♖";
     private final String blackPiece = "♜";

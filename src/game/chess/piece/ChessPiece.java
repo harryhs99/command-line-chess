@@ -7,4 +7,8 @@ package game.chess.piece;
  */
 public abstract class ChessPiece implements Piece {
 
+    @Override
+    public String toString() {
+        return "";
+    }
 }
