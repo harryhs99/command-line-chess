@@ -59,6 +59,7 @@ public class Board {
 
     public void displayBoard() {
         System.out.println("  | A | B | C | D | E | F | G | H |");
+        System.out.println("-------------------------------------");
         for (int i = 0; i < board.length; i++) {
             for (int j = 0; j < board[i].length; j++) {
                 if (j == 0)
