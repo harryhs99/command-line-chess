@@ -24,6 +24,7 @@ public class PlayGame {
             String[] validInput = {"p", "s", "r", "q"};
             String input = sc.nextLine();
 
+
             switch(input)
             {
                 case "q":
@@ -31,9 +32,25 @@ public class PlayGame {
                     quit = true;
                     break;
                 case "p":
+                    boolean checkMate = false;
+                    int turn = 1;
                     Board b = new Board(8, 8);
                     b.initialiseBoard();
-                    b.displayBoard();
+
+                    while (!checkMate) {
+                        b.displayBoard();
+                        if(turn%2 != 0)
+                            System.out.println("Black turn please enter your move:");
+                        else
+                            System.out.println("White turn please enter your move:");
+                        String move = sc.nextLine();
+                        turn++;
+
+
+                        if(turn == 10)
+                            checkMate = true;
+                    }
+                    System.out.println("Good Game!");
                     break;
                 case "s":
                     // display settings
@@ -46,8 +63,7 @@ public class PlayGame {
                 default:
                     if(!Arrays.asList(validInput).contains(input))
                         System.out.println("please enter a valid option...");
-
-
+                    break;
             }
 
         }
@@ -70,4 +86,6 @@ public class PlayGame {
         System.out.println("[q]uit");
         lineBreak();
     }
+
+
 }
